@@ -68,13 +68,6 @@ template['OPTIONS']['loaders'] = (
     'django.template.loaders.app_directories.Loader',
 )
 
-# Disable capturing all SQL queries when running celeryd in development.
-if 'celery' in sys.argv:
-    SQL_DEBUG = False
-
-CELERYD_HIJACK_ROOT_LOGGER = False
-CELERYD_LOG_COLOR = True
-
 CALLBACK_QUEUE = "callback_tasks"
 
 # Enable dynamically pulling roles from a requirement.yml file
